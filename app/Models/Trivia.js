@@ -1,9 +1,8 @@
-import { ProxyState } from "../AppState";
-
 export class Trivia {
     constructor(data) {
         this.name = data.question
         this.answers = data.incorrect_answers && data.correct_answers
+        this.diff = data.difficulty
     }
 
     get Template() {

@@ -1,9 +1,8 @@
-import { TriviaController } from "./Controllers/TriviaController";
+import { TriviaController } from "./Controllers/TriviaController.js";
 
-// TriviaController
 
 class App {
-  TriviaController = TriviaController();
+  TriviaController = new TriviaController();
 }
 
 window["app"] = new App();
