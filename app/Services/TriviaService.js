@@ -8,8 +8,7 @@ import { hpApi } from "./AxiosService.js";
 class TriviaService {
     async getAllTrivia() {
         let res = await hpApi.get('')
-        console.log(res.data)
-        // res.data.results = res.data.results.filter(q => q.diff == 'easy')
+        res.data.results = res.data.results.filter(q => q.difficulty == 'easy')
         let questions = res.data.results.map(q => new Trivia(q))
         console.log(questions)
         ProxyState.trivia = questions
