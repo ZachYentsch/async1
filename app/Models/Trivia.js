@@ -1,11 +1,9 @@
-import { generateId } from "../Utils/generateId.js"
 
 export class Trivia {
     constructor(data) {
         this.name = data.question
         this.answers = [...data.incorrect_answers, data.correct_answer]
         this.diff = data.difficulty
-        this.id = generateId()
     }
 
     get Template() {
